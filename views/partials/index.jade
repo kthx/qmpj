@@ -1,0 +1,8 @@
+div.container
+    div.row
+    div.col-sm-6.col-md-4.col-md-offset-4
+        h3.text-center.login-title Sign in to QMPJ
+        div(class='mainLogin',ng-controller="LoginCtrl" )
+            img(class='profile-img', src='https://ssl.gstatic.com/accounts/ui/avatar_2x.png')
+            form(name="loginForm", class="form-signin" sf-schema="schema", sf-form="form", sf-model="model", ng-submit="onSubmit(loginForm)")
+            a(href='/register', class='text-center new-account' ) Create an account

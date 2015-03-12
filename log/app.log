@@ -1,0 +1,201 @@
+
+> jmv@0.0.1 start /root/production/jmv
+> node ./bin/www
+
+Successfully connected to: mongodb://localhost/qmpj
+generic route hit
+[90mGET /home [32m200 [90m3748ms - 2.05kb[0m
+partial route hit
+[90mGET /partials/home [32m200 [90m617ms - 2.43kb[0m
+[90mGET /projects/api [31m500 [90m45ms - 153b[0m
+[90mDELETE /auth/session [32m200 [90m89ms - 2b[0m
+partial route hit
+[90mGET /partials/index [32m200 [90m193ms - 504b[0m
+[90mPOST /auth/session [33m400 [90m49ms - 56b[0m
+[90mPOST /auth/session [33m400 [90m27ms - 56b[0m
+[90mPOST /auth/session [33m400 [90m22ms - 56b[0m
+[90mPOST /auth/session [33m400 [90m22ms - 56b[0m
+[90mPOST /auth/session [33m400 [90m23ms - 56b[0m
+[90mPOST /auth/session [32m200 [90m821ms - 76b[0m
+[90mGET /projects/api [31m500 [90m28ms - 145b[0m
+generic route hit
+[90mGET /home [32m200 [90m23ms - 2.05kb[0m
+partial route hit
+[90mGET /partials/home [32m200 [90m35ms - 2.43kb[0m
+[90mGET /projects/api [31m500 [90m19ms - 145b[0m
+
+> jmv@0.0.1 start /root/production/jmv
+> node ./bin/www
+
+Successfully connected to: mongodb://localhost/qmpj
+generic route hit
+[90mGET /home [32m200 [90m3729ms - 2.05kb[0m
+partial route hit
+[90mGET /partials/home [32m200 [90m589ms - 2.43kb[0m
+[90mGET /projects/api [32m200 [90m230ms - 10.91kb[0m
+[90mDELETE /auth/session [32m200 [90m72ms - 2b[0m
+partial route hit
+[90mGET /partials/index [32m200 [90m143ms - 504b[0m
+[90mPOST /auth/session [32m200 [90m841ms - 84b[0m
+[90mGET /projects/api [32m200 [90m26ms - 2b[0m
+
+> jmv@0.0.1 start /root/production/jmv
+> node ./bin/www
+
+Successfully connected to: mongodb://localhost/qmpj
+[90mPOST /auth/session [32m200 [90m971ms - 84b[0m
+[90mPOST /projects/api [31m500 [90m101ms - 172b[0m
+generic route hit
+[90mGET /home [32m200 [90m3728ms - 2.05kb[0m
+partial route hit
+[90mGET /partials/home [32m200 [90m603ms - 2.43kb[0m
+[90mGET /projects/api [32m200 [90m63ms - 191b[0m
+generic route hit
+[90mGET /home [32m200 [90m32ms - 2.05kb[0m
+partial route hit
+[90mGET /partials/home [32m200 [90m24ms - 2.43kb[0m
+[90mGET /projects/api [36m304 [90m51ms[0m
+[90mDELETE /projects/api/54e09cd1ae5daeb35b7926f9 [33m400 [90m455ms - 2.08kb[0m
+project loaded: 54e09cd1ae5daeb35b7926f9
+[90mDELETE /projects/api/54e09cd1ae5daeb35b7926f9 [31m500 [90m42ms - 2.11kb[0m
+generic route hit
+[90mGET /home [32m200 [90m26ms - 2.05kb[0m
+partial route hit
+[90mGET /partials/home [32m200 [90m29ms - 2.43kb[0m
+[90mGET /projects/api [36m304 [90m37ms[0m
+[90mGET /auth/session [33m401 [90m21ms - 12b[0m
+[90mGET /projects/api [31m500 [90m17ms - 2.1kb[0m
+partial route hit
+[90mGET /partials/index [32m200 [90m140ms - 504b[0m
+
+> jmv@0.0.1 start /root/production/jmv
+> node ./bin/www
+
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+generic route hit
+[90mGET / [32m200 [90m3647ms - 2.05kb[0m
+[90mGET /partials/index [32m200 [90m185ms - 504b[0m
+[90mGET /partials/home [32m200 [90m616ms - 2.43kb[0m
+[90mGET /projects/api [31m500 [90m54ms - 2.1kb[0m
+[90mPOST /auth/session [33m400 [90m128ms - 21b[0m
+[90mPOST /auth/session [33m400 [90m82ms - 21b[0m
+[90mPOST /auth/session [33m400 [90m78ms - 21b[0m
+[90mGET /partials/register [32m200 [90m159ms - 389b[0m
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+generic route hit
+[90mGET / [32m200 [90m3748ms - 2.05kb[0m
+[90mGET /partials/index [32m200 [90m201ms - 504b[0m
+[90mGET /partials/register [32m200 [90m170ms - 389b[0m
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+generic route hit
+[90mGET /register [32m200 [90m3616ms - 2.05kb[0m
+[90mGET /partials/register [36m304 [90m180ms[0m
+[90mGET /partials/index [36m304 [90m163ms[0m
+[90mPOST /auth/session [33m400 [90m123ms - 21b[0m
+[90mPOST /auth/session [33m400 [90m84ms - 21b[0m
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+generic route hit
+[90mGET / [36m304 [90m3721ms[0m
+[90mGET /partials/index [36m304 [90m158ms[0m
+[90mPOST /auth/session [33m400 [90m77ms - 56b[0m
+[90mGET /partials/register [36m304 [90m139ms[0m
+[90mPOST /auth/users [32m200 [90m902ms - 84b[0m
+[90mGET /auth/session [32m200 [90m46ms - 84b[0m
+[90mGET /partials/home [32m200 [90m632ms - 2.43kb[0m
+[90mGET /projects/api [32m200 [90m38ms - 2b[0m
+generic route hit
+[90mGET / [32m200 [90m26ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m17ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m15ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m16ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m15ms - 2.05kb[0m
+generic route hit
+[90mGET /home [32m200 [90m16ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m24ms - 2.05kb[0m
+[90mGET /partials/index [32m200 [90m19ms - 504b[0m
+generic route hit
+[90mGET /about [32m200 [90m33ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m27ms - 2.05kb[0m
+[90mGET /results/%7B%7BresultPath()%7D%7D [33m401 [90m13ms - 12b[0m
+[90mGET /config [33m401 [90m13ms - 12b[0m
+generic route hit
+[90mGET / [32m200 [90m16ms - 2.05kb[0m
+generic route hit
+[90mGET /about [32m200 [90m18ms - 2.05kb[0m
+generic route hit
+[90mGET /home [32m200 [90m23ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m14ms - 2.05kb[0m
+[90mGET /partials/index [32m200 [90m10ms - 504b[0m
+generic route hit
+[90mGET / [36m304 [90m12ms[0m
+
+> jmv@0.0.1 start /root/production/qmpj
+> node ./bin/www
+
+generic route hit
+[90mGET /robots.txt [32m200 [90m3770ms - 2.05kb[0m
+generic route hit
+[90mGET /home [32m200 [90m38ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m26ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m27ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m19ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m20ms - 2.05kb[0m
+generic route hit
+[90mGET /home [32m200 [90m16ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m17ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m21ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m33ms - 2.05kb[0m
+generic route hit
+[90mGET / [32m200 [90m17ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m18ms - 2.05kb[0m
+generic route hit
+[90mGET /about [32m200 [90m23ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m17ms - 2.05kb[0m
+[90mGET /config [33m401 [90m14ms - 12b[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m15ms - 2.05kb[0m
+generic route hit
+[90mGET /about [32m200 [90m14ms - 2.05kb[0m
+generic route hit
+[90mGET /robots.txt [32m200 [90m17ms - 2.05kb[0m
+[90mGET /config [33m401 [90m15ms - 12b[0m

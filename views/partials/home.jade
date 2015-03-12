@@ -1,0 +1,59 @@
+div.alerts
+    alert(ng-repeat="alert in alerts" type="{{alert.type}}") {{alert.msg}}
+h3 Welcome back, {{$root.currentUser.username}}
+br
+div(ng-controller="ProjectCtrl" class="projectFormWrapper")
+    p
+        | {{projects.length == 0 ?'This is the projects overview. Please add a new project to beginn':'This is the projects overview, you can add new projects and revision or compare results between revisions.'}}
+    form(name="projectForm", class="" sf-schema="schema", sf-form="form", sf-model="model", ng-submit="onSubmit(projectForm)")
+    article(ng-repeat="project in projects| orderBy:'$index':true")
+        h2 Project name: 
+            b
+                {{project.title}}
+        h5 Created:  {{project.created  | date:'yyyy-MM-dd HH:mm:ss'}}
+        span(class="btn btn-warning",  ng-click="remove(project)")
+            span(class="glyphicon glyphicon-minus").
+            | Delete entire project
+        span(ng-controller="UploadCtrl"  class="uploadForm")
+            div(class="btn btn-success",ng-disabled="!noUploadInProgress", ng-file-select="onFileSelect($files, project)",data-multiple="true")
+                span(class="glyphicon glyphicon-plus").
+                | Upload .zip or .java
+        tabset(justified="true", class="pageTabs")
+            tab(heading="Project overview table") 
+                table(class="table table-bordered")
+                    thead
+                        tr
+                            th(rowspan="2") Revision number
+                            th(rowspan="2") Date uploaded
+                            th(rowspan="2") Number of files 
+                            th(colspan="3") Checkstyle 
+                            th(colspan="5") JUnit 
+                            th(rowspan="2") Details 
+
+                        tr
+                            th info 
+                            th warning 
+                            th error 
+                            th All
+                            th Error 
+                            th Fail 
+                            th Skipped 
+                            th Time
+                    tbody
+                        tr(ng-repeat="revision in project.revisions | orderBy:'revisionNumber':true")
+                            td {{revision.revisionNumber}}
+                            td {{revision.created  | date:'yyyy-MM-dd HH:mm:ss'}}
+                            td {{revision.filesCount}}
+                            td {{revision.checkstyleInfo}}
+                            td {{revision.checkstyleWarning}}
+                            td {{revision.checkstyleError}}
+                            td {{revision.unitTestsCount}}
+                            td {{revision.erroredUnitTestsCount}}
+                            td {{revision.failedUnitTestsCount}}
+                            td {{revision.skippedUnitTestsCount}}
+                            td {{revision.unitTestsTime | number:2}}s
+                            td
+                                a(href="/results/{{revision.location}}") 
+                                    | View details
+            tab(heading="Project overview graph" ng-click="resizeGraph()")
+                div(google-chart, chart="projectChart", ng-controller="ProjectGraphCtrl",  ng-style="{ width: projectChart.cssStyle.width, height:  projectChart.cssStyle.height}")

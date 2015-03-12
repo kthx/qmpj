@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.6">
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/.project">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="3" column="1" severity="warning" message="File contains tab characters (this is the first instance)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/.settings/org.eclipse.jdt.core.prefs">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+</file>
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/.classpath">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="3" column="1" severity="warning" message="File contains tab characters (this is the first instance)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/src/org/j2eedev/calc/Calculation.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="7" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="8" column="1" severity="warning" message="File contains tab characters (this is the first instance)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/bin/org/j2eedev/math/MathTest.class">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="2" column="9" severity="warning" message="File contains tab characters (this is the first instance)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/bin/org/j2eedev/calc/Calculation.class">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="2" column="4" severity="warning" message="File contains tab characters (this is the first instance)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+<file name="/root/production/jmv/results/7M0TT9XNV7F4/files/JunitTest/test/org/j2eedev/math/MathTest.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="10" severity="warning" message="Wrong order for &apos;junit.framework.TestCase&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="12" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="14" column="1" severity="warning" message="File contains tab characters (this is the first instance)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+</checkstyle>

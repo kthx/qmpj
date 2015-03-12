@@ -1,0 +1,40 @@
+div(class="resultContainer")
+    tabset(justified="true")
+        tab(heading="Aggregated results") 
+            div(google-chart, chart="vBars", ng-style="{ width: vBars.cssStyle.width, height:  vBars.cssStyle.height}")
+            div(google-chart, chart="pie", ng-style="{ width: pie.cssStyle.width, height:  pie.cssStyle.height}")
+            div(google-chart, chart="hBars", ng-style="{ width: hBars.cssStyle.width, height:  hBars.cssStyle.height}")
+        tab(heading="JUnit results") 
+            div(data-ng-repeat="(id, value) in junitResults")
+                h2(ng-show="value.testsuite.error.length > 0") Errored tests
+                div(ng-show="value.testsuite.error.length > 0")
+                    h3 {{id}}
+                    pre {{value.testsuite.error[0]._}}
+                h2(ng-show="value.testsuite.testcase[0].failure.length > 0") Failed tests
+                div(ng-show="value.testsuite.testcase[0].failure.length > 0")
+                    h3 {{id}}
+                    pre {{value.testsuite.testcase[0].failure[0].$.message}}
+                h2(ng-show="value.testsuite.testcase.length > 0") Found Unit tests
+                div(ng-show="value.testsuite.testcase.length > 0")
+                    h3 {{id}}
+                    ul
+                        li(data-ng-repeat="(id, value) in value.testsuite.testcase") {{value.$.name}} - time: {{value.$.time}}
+        tab(heading="Checkstyle results")
+            .col-md-3
+                ul(class="nav nav-stacked sidebar affix")
+                  li(data-ng-repeat="(id, value) in sourceCode") 
+                    a(href="", class="", scroll-to="{{(id).split('/').join('-').replace('.', '_')}}") {{(id).split('/')[(id).split('/').length -1]}}
+            .col-md-9
+                h2 Analysis results:
+                div(data-ng-repeat="(id, value) in sourceCode") 
+                    h3(class="fileTitle", id="{{(id).split('/').join('-').replace('.', '_')}}") {{id}}
+                    div(class="generalErrors-{{(id).split('/').join('-').replace('.', '_')}}")
+                        h4 Statistics
+                        |Error count: 
+                        span.ErrorCount 0
+                        h4 General errors
+                        ul.GeneralErrors
+                            li.none none
+                    pre(class="prettyprint")
+                       code(class="language-java") 
+                           | {{(value.source).join('\n')}}

@@ -1,0 +1,13 @@
+div(ng-controller="ConfigFormCtrl")
+    .col-md-3
+        ul(class="nav nav-stacked sidebar affix")
+          li(data-ng-repeat="fieldset in form|onlyfieldsets") 
+            a(href="", class="", scroll-to="{{(fieldset.title).replace(' ', '')}}") {{(fieldset.title)}}    
+    div(class="col-md-9")
+        .innerWrapper
+            h2 Configuration
+            div.alerts
+                alert(ng-repeat="alert in alerts" type="{{alert.type}}") {{alert.msg}}
+            form(name="configForm", class="configForm" sf-schema="schema", sf-form="form", sf-model="model", ng-submit="onSubmit(configForm)")
+
+

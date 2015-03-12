@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!-- This is a checkstyle configuration file. For descriptions of
+what the following rules do, please see the checkstyle configuration
+page at http://checkstyle.sourceforge.net/config.html 
+
+
+
+
+-->
+ 
+<module name="Checker">
+    <module name="TreeWalker">
+
+        <module name="CyclomaticComplexity">
+            <metadata name="com.jmv.identifier" value="cyclomaticcomplexitychecker" />
+            <metadata name="com.jmv.helptext" value="
+                Checks cyclomatic complexity against a specified limit. The complexity is measured by the number of if, while, do, for, ?:, catch, switch, case statements, and operators &amp;&amp; and || (plus one) in the body of a constructor, method, static initializer, or instance initializer. It is a measure of the minimum number of possible paths through the source and therefore the number of required tests. Generally 1-4 is considered good, 5-7 ok, 8-10 consider re-factoring, and 11+ re-factor now!
+                " />
+            <metadata name="com.jmv.title" value="CyclomaticComplexity check" />
+            <property name="severity" value="warning" />
+            <property name="max" value="4"/>
+        </module>
+
+        <module name="BooleanExpressionComplexity">
+            <metadata name="com.jmv.identifier" value="booleanexpressioncomplexitychecker" />
+            <metadata name="com.jmv.helptext" value="
+                Restrict the number of number of &amp;&amp;, ||, &amp;, | and ^ in an expression.
+                Rationale: Too many conditions leads to code that is difficult to read and hence debug and maintain.
+                Note that the operators &amp; and | are not only integer bitwise operators, they are also the non-shortcut versions of the boolean operators &amp;&amp; and ||.
+                " />
+            <metadata name="com.jmv.title" value="BooleanExpressionComplexity check" />
+            <property name="severity" value="warning" />
+            <property name="max" value="4"/>
+            <property name="tokens" value="LAND, BAND, LOR, BOR, BXOR"/>
+        </module>
+
+
+        <module name="ClassDataAbstractionCoupling">
+            <metadata name="com.jmv.identifier" value="classdataabstractioncouplingchecker" />
+            <metadata name="com.jmv.helptext" value="
+                This metric measures the number of instantiations of other classes within the given class. This type of coupling is not caused by inheritance or the object oriented paradigm. Generally speaking, any abstract data type with other abstract data types as members has data abstraction coupling; therefore, if a class has a local variable that is an instantiation (object) of another class, there is data abstraction coupling. The higher the DAC, the more complex the data structure (classes) of the system.
+                " />
+            <metadata name="com.jmv.title" value="ClassDataAbstractionCoupling check" />
+            <property name="severity" value="warning" />
+            <property name="max" value="7"/>
+            
+        </module>
+
+        <module name="ClassFanOutComplexity">
+            <metadata name="com.jmv.identifier" value="classfanoutcomplexitychecker" />
+            <metadata name="com.jmv.helptext" value="
+                The number of other classes a given class relies on. Also the square of this has been shown to indicate the amount of maintenance required in functional programs (on a file basis) at least.
+                " />
+            <metadata name="com.jmv.title" value="ClassFanOutComplexity check" />
+            <property name="severity" value="warning" />
+            <property name="max" value="20"/>
+        </module>
+
+        <module name="NPathComplexity">
+            <metadata name="com.jmv.identifier" value="npathcomplexitychecker" />
+            <metadata name="com.jmv.helptext" value="
+                The NPATH metric computes the number of possible execution paths through a function. It takes into account the nesting of conditional statements and multi-part boolean expressions (e.g., A &amp;&amp; B, C || D, etc.).
+                Rationale: Nejmeh says that his group had an informal NPATH limit of 200 on individual routines; functions that exceeded this value were candidates for further decomposition - or at least a closer look.
+                " />
+            <metadata name="com.jmv.title" value="NPathComplexity check" />
+            <property name="severity" value="warning" />
+            <property name="max" value="200"/>
+        </module>
+
+        <module name="JavaNCSS">
+            <metadata name="com.jmv.identifier" value="javancsschecker" />
+            <metadata name="com.jmv.helptext" value="
+                Determines complexity of methods, classes and files by counting the Non Commenting Source Statements (NCSS). This check adheres to the specification for the JavaNCSS-Tool written by Chr. Clemens Lee.
+                Rougly said the NCSS metric is calculated by counting the source lines which are not comments, (nearly) equivalent to counting the semicolons and opening curly braces.
+                The NCSS for a class is summarized from the NCSS of all its methods, the NCSS of its nested classes and the number of member variable declarations.
+                The NCSS for a file is summarized from the ncss of all its top level classes, the number of imports and the package declaration.
+
+                Rationale: Too large methods and classes are hard to read and costly to maintain. A large NCSS number often means that a method or class has too many responsibilities and/or functionalities which should be decomposed into smaller units.
+                " />
+            <metadata name="com.jmv.title" value="JavaNCSS check" />
+            <property name="severity" value="warning" />
+            <property name="methodMaximum" value="50"/>
+            <property name="classMaximum" value="1500"/>
+            <property name="fileMaximum" value="2000"/>
+        </module>
+
+
+        <module name="RedundantImport">
+            <metadata name="com.jmv.identifier" value="redundantimportchecker" />
+            <metadata name="com.jmv.helptext" value="
+                Checks for redundant import statements. An import statement is considered redundant if:
+                It is a duplicate of another import. This is, when a class is imported more than once.
+                The class imported is from the java.lang package, e.g. importing java.lang.String.
+                The class imported is from the same package.
+                " />
+            <metadata name="com.jmv.title" value="RedundantImport check" />
+            <property name="severity" value="error"/>
+        </module>
+
+        <module name="ImportOrder">
+            <metadata name="com.jmv.identifier" value="importorderchecker" />
+            <metadata name="com.jmv.helptext" value="
+                Checks the ordering/grouping of imports. Features are:
+                groups imports: ensures that groups of imports come in a specific order (e.g., java. comes first, javax. comes second, then everything else)
+                adds a separation between groups : ensures that a blank line sit between each group
+                sorts imports inside each group: ensures that imports within each group are in lexicographic order
+                sorts according to case: ensures that the comparison between imports is case sensitive
+                groups static imports: ensures the relative order between regular imports and static imports
+                " />
+            <metadata name="com.jmv.title" value="ImportOrder check" />
+
+            <property name="severity" value="warning"/>
+            <property name="groups" value="com.google,android,junit,net,org,java,javax"/>
+            <property name="option" value="top"/>
+            <!--property name="tokens" value="STATIC_IMPORT, IMPORT"/-->
+        </module>
+
+
+        <module name='JavadocMethod'>
+            <metadata name='com.jmv.identifier' value='javadocmethodchecker' />
+            <metadata name='com.jmv.helptext' value='
+                Checks the Javadoc of a method or constructor. By default, does not check for unused throws. To allow documented java.lang.RuntimeExceptions that are not declared, set property allowUndeclaredRTE to true. The scope to verify is specified using the Scope class and defaults to Scope.PRIVATE. To verify another scope, set property scope to a different scope.
+
+                Error messages about parameters and type parameters for which no param tags are present can be suppressed by defining property allowMissingParamTags. Error messages about exceptions which are declared to be thrown, but for which no throws tag is present can be suppressed by defining property allowMissingThrowsTags. Error messages about methods which return non-void but for which no return tag is present can be suppressed by defining property allowMissingReturnTag.
+
+                Javadoc is not required on a method that is tagged with the @Override annotation. However under Java 5 it is not possible to mark a method required for an interface (this was corrected under Java 6). Hence Checkstyle supports using the convention of using a single {@inheritDoc} tag instead of all the other tags.
+
+                Note that only inheritable items will allow the {@inheritDoc} tag to be used in place of comments. Static methods at all visibilities, private non-static methods and constructors are not inheritable.
+
+                For example, if the following method is implementing a method required by an interface, then the Javadoc could be done as:
+&lt;pre&gt;
+/** {@inheritDoc} */
+public int checkReturnTag(final int aTagIndex,
+                          JavadocTag[] aTags,
+                          int aLineNo)
+&lt;/pre&gt;
+                The classpath may need to be configured to locate the class information. The classpath configuration is dependent on the mechanism used to invoke Checkstyle.
+                ' />
+            <metadata name='com.jmv.title' value='JavadocMethod check' />
+
+            <property name='scope' value='protected'/>
+            <property name='severity' value='warning'/>
+            <property name='allowMissingJavadoc' value='true'/>
+            <property name='allowMissingParamTags' value='true'/>
+            <property name='allowMissingReturnTag' value='true'/>
+            <property name='allowMissingThrowsTags' value='true'/>
+            <property name='allowThrowsTagsForSubclasses' value='true'/>
+            <property name='allowUndeclaredRTE' value='true'/>
+        </module>
+
+        <module name='JavadocType'>
+            <metadata name='com.jmv.identifier' value='javadoctypechecker' />
+            <metadata name='com.jmv.helptext' value='
+                Checks Javadoc comments for class and interface definitions. By default, does not check for author or version tags. The scope to verify is specified using the Scope class and defaults to Scope.PRIVATE. To verify another scope, set property scope to one of the Scope constants. To define the format for an author tag or a version tag, set property authorFormat or versionFormat respectively to a regular expression.
+                ' />
+            <metadata name='com.jmv.title' value='JavadocType check' />
+            <property name='scope' value='protected'/>
+            <property name='severity' value='error'/>
+        </module>
+
+        <module name='JavadocStyle'>
+            <metadata name='com.jmv.identifier' value='javadocstylechecker' />
+            <metadata name='com.jmv.helptext' value="
+                Validates Javadoc comments to help ensure they are well formed. The following checks are performed:
+
+                Ensures the first sentence ends with proper punctuation (That is a period, question mark, or exclamation mark, by default). Javadoc automatically places the first sentence in the method summary table and index. With out proper punctuation the Javadoc may be malformed. All items eligible for the {@inheritDoc} tag are exempt from this requirement.
+                Check text for Javadoc statements that do not have any description. This includes both completely empty Javadoc, and Javadoc with only tags such as @param and @return.
+                Check text for incomplete HTML tags. Verifies that HTML tags have corresponding end tags and issues an 'Unclosed HTML tag found:' error if not. An 'Extra HTML tag found:' error is issued if an end tag is found without a previous open tag.
+                Check that a package Javadoc comment is well-formed (as described above) and NOT missing from any package-info.java files.
+                Check for allowed HTML tags. The list of allowed HTML tags is 'a', 'abbr', 'acronym', 'address', 'area', 'b', 'bdo', 'big', 'blockquote', 'br', 'caption', 'cite', 'code', 'colgroup', 'del', 'div', 'dfn', 'dl', 'em', 'fieldset', 'h1' to 'h6', 'hr', 'i', 'img', 'ins', 'kbd', 'li', 'ol', 'p', 'pre', 'q', 'samp', 'small', 'span', 'strong', 'sub', 'sup', 'table', 'tbody', 'td', 'tfoot', 'th', 'thread', 'tr', 'tt', 'ul'.
+                " />
+            <metadata name='com.jmv.title' value='JavadocStyle check' />
+            <property name='severity' value='warning'/>
+        </module>
+
+        <module name="PackageName">
+            <metadata name='com.jmv.identifier' value='packagenamechecker' />
+            <metadata name='com.jmv.helptext' value="
+                Checks wether the package name fits with the supplied regex
+                " />
+            <metadata name='com.jmv.title' value='PackageName check' />
+            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]{1,})*$"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="TypeNameCheck">
+            <metadata name='com.jmv.identifier' value='typenamecheckchecker' />
+            <metadata name='com.jmv.helptext' value='
+                Validates classes and interfaces against the "^[A-Z][a-zA-Z0-9]*$". regex
+                ' />
+            <metadata name='com.jmv.title' value='TypeNameCheck check' />
+            <metadata name="altname" value="TypeName"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="ConstantNameCheck">
+            <metadata name='com.jmv.identifier' value='constantnamecheckchecker' />
+            <metadata name='com.jmv.helptext' value='
+                Validates non-private, static, final fields against the supplied public/package final fields.
+                ' />
+            <metadata name='com.jmv.title' value='ConstantNameCheck check' />
+            <metadata name="altname" value="ConstantName"/>
+            <property name="applyToPublic" value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage" value="true"/>
+            <property name="applyToPrivate" value="false"/>
+            <property name="format" value="^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|FLAG_.*)$"/>
+            <message key="name.invalidPattern"
+                   value="Variable ''{0}'' should be in ALL_CAPS (if it is a constant) or be private (otherwise)."/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="StaticVariableNameCheck">
+            <metadata name='com.jmv.identifier' value='staticvariablenamecheckchecker' />
+            <metadata name='com.jmv.helptext' value='
+                Validates static, non-final fields against the supplied expression
+                ' />
+            <metadata name='com.jmv.title' value='StaticVariableNameCheck check' />
+
+            <metadata name="altname" value="StaticVariableName"/>
+            <property name="applyToPublic" value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage" value="true"/>
+            <property name="applyToPrivate" value="true"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9]*_?$"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="MemberNameCheck">
+            <metadata name='com.jmv.identifier' value='membernamecheckchecker' />
+            <metadata name='com.jmv.helptext' value='
+                Validates non-static members against the supplied expression.
+                ' />
+            <metadata name='com.jmv.title' value='MemberNameCheck check' />
+
+            <metadata name="altname" value="MemberName"/>
+            <property name="applyToPublic" value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage" value="true"/>
+            <property name="applyToPrivate" value="true"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="MethodNameCheck">
+            <metadata name='com.jmv.identifier' value='methodnamecheckchecker' />
+            <metadata name='com.jmv.helptext' value='
+               Validates identifiers for method names.
+                ' />
+            <metadata name='com.jmv.title' value='MethodNameCheck check' />
+
+            <metadata name="altname" value="MethodName"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9]*(_[a-zA-Z0-9]+)*$"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="ParameterName">
+            <metadata name='com.jmv.identifier' value='parameternamechecker' />
+            <metadata name='com.jmv.helptext' value='
+               Validates identifiers for method parameters against the expression "^[a-z][a-zA-Z0-9]*$".
+                ' />
+            <metadata name='com.jmv.title' value='ParameterName check' />
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="LocalFinalVariableName">
+            <metadata name='com.jmv.identifier' value='localfinalvariablenamechecker' />
+            <metadata name='com.jmv.helptext' value='
+               Validates identifiers for local final variables against the expression "^[a-z][a-zA-Z0-9]*$".
+                ' />
+            <metadata name='com.jmv.title' value='LocalFinalVariableName check' />
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="LocalVariableName">
+            <metadata name='com.jmv.identifier' value='localvariablenamechecker' />
+            <metadata name='com.jmv.helptext' value='
+               Validates identifiers for local variables against the expression "^[a-z][a-zA-Z0-9]*$".
+                ' />
+            <metadata name='com.jmv.title' value='LocalVariableName check' />
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="LineLength">
+            <metadata name='com.jmv.identifier' value='linelengthchecker' />
+            <metadata name='com.jmv.helptext' value='
+               Checks if a line is too long.
+               The default ignore pattern exempts the following elements:
+                  - import statements
+                  - long URLs inside comments
+                ' />
+            <metadata name='com.jmv.title' value='LineLength check' />
+            <property name="max" value="100" default="100"/>
+            <property name="severity" value="error"/>
+            <property name="ignorePattern" value="^(package .*;\s*)|(import .*;\s*)|( *\* *https?://.*)$"
+                default="^(package .*;\s*)|(import .*;\s*)|( *\* *https?://.*)$" />
+        </module>
+
+        <module name="LeftCurly">
+            <metadata name='com.jmv.identifier' value='leftcurlychecker' />
+            <metadata name='com.jmv.title' value='LeftCurly check' />
+            <metadata name='com.jmv.helptext' value='
+               Checks for placement of the left curly brace ("{")
+                ' />
+            
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="RightCurly">
+            <metadata name='com.jmv.identifier' value='rightcurlychecker' />
+            <metadata name='com.jmv.title' value='RightCurly check' />
+            <metadata name='com.jmv.helptext' value='
+               Checks right curlies on CATCH, ELSE, and TRY blocks are on
+      the same line. e.g., the following example is fine:
+      &lt;pre&gt;
+        if {
+          ...
+        } else&lt;/pre&gt;
+      This next example is not fine:
+      &lt;pre&gt;
+        if {
+          ...
+        }
+        else&lt;/pre&gt;
+                ' />
+            <property name="option" value="same"/>
+          <property name="severity" value="warning"/>
+        </module>
+    </module>
+
+
+
+    <module name="RegexpSingleline">
+        <metadata name="com.jmv.identifier" value="copyrightchecker" />
+        <property name="format"
+            value="^(//| \*) Copyright (\([cC]\) )?[\d]{4}(\-[\d]{4})? (Company name\.).*$" />
+        <property name="minimum" value="1" />
+        <property name="maximum" value="10" />
+        <property name="message" value="Copyright is missing or malformed." />
+        <property name="severity" value="warning" />
+        <metadata name="com.jmv.title" value="Copyright check" />
+        <metadata name="com.jmv.helptext" value="
+  Requires a copyright notice in each file.
+  Code intended to be open-sourced may have a multi-line copyright
+  notice, so that this required text appears on the second line:
+  &lt;pre&gt;
+/*
+* Copyright 20XX Company name.
+*
+* (details of open-source license...)
+*/&lt;/pre&gt;" />
+    </module>
+    <module name="FileTabCharacter">
+        <metadata name="com.jmv.identifier" value="tabchecker" />
+        <metadata name="com.jmv.helptext" value="Checks that there are no tab characters in the file" />
+        <metadata name="com.jmv.title" value="Tab check" />
+        <property name="severity" value="warning" />
+    </module>
+
+    <module name="NewlineAtEndOfFile">
+        <metadata name="com.jmv.identifier" value="newlineatendoffilechecker" />
+        <metadata name="com.jmv.helptext" value="Checks whether files end with a new line. Rationale: Any source files and text files in general should end with a newline character, especially when using SCM systems such as CVS. CVS will even print a warning when it encounters a file that doesn't end with a newline." />
+        <metadata name="com.jmv.title" value="NewlineAtEndOfFile check" />
+
+        <property name="lineSeparator" value="system"/>
+        <property name="fileExtensions" value="java"/>
+
+        <property name="severity" value="warning" />
+    </module>
+
+    <module name="RegexpSingleline">
+        <metadata name="com.jmv.identifier" value="nofixmechecker" />
+        <metadata name="com.jmv.title" value="No Fixme check" />
+        <metadata name="com.jmv.helptext" value="Checks that FIXME is not used in comments.  TODO is preferred." />
+        <property name="format" value="((//.*)|(\*.*))FIXME" />
+        <property name="message" value='TODO is preferred to FIXME.  e.g. "TODO(johndoe): Refactor when v2 is released."' />
+  </module>
+
+  <module name="RegexpSingleline">
+        <metadata name="com.jmv.identifier" value="todonamedchecker" />
+        <metadata name="com.jmv.title" value="Todos named check" />
+        <metadata name="com.jmv.helptext" value="Checks that TODOs are named.  (Actually, just that they are followed by an open paren." />
+        <property name="format" value="((//.*)|(\*.*))TODO[^(]" />
+        <property name="message" value='All TODOs should be named.  e.g. "TODO(johndoe): Refactor when v2 is released."' />
+  </module>
+
+
+</module>

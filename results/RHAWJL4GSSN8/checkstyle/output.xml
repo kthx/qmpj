@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.6">
+<file name="/root/production/jmv/results/RHAWJL4GSSN8/files/Phone.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="3" column="4" severity="error" message="Unknown tag &apos;date&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/root/production/jmv/results/RHAWJL4GSSN8/files/User.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="3" column="4" severity="error" message="Unknown tag &apos;date&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+</checkstyle>

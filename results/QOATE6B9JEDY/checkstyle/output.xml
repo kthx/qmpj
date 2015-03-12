@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.6">
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/application/Kunde.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/application/ServerProtokoll.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="6" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="8" column="5" severity="warning" message="Cyclomatic Complexity is 9 (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
+<error line="14" severity="error" message="Line is longer than 100 characters (found 117)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/application/KundenContainerEinfach.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="0" severity="warning" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="15" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/persistence/ObjektSpeicher.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="9" severity="warning" message="Wrong order for &apos;java.beans.*&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="11" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/schnittstelle/KundenContainerEinfachI.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="0" severity="warning" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/schnittstelle/KommandoKonstante.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="0" severity="warning" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="7" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/server/ServerStart.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="16" column="5" severity="warning" message="Cyclomatic Complexity is 6 (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/client/application/ServerProxy.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="14" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="18" column="23" severity="warning" message="Name &apos;PORT_NUMMER&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="19" column="26" severity="warning" message="Name &apos;SERVER_NAME&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/client/gui/ClientStart.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/root/production/jmv/results/QOATE6B9JEDY/files/src/client/gui/Kundenfenster.java">
+<error line="0" severity="warning" message="Copyright is missing or malformed." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="0" severity="warning" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="10" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="10" column="1" severity="warning" message="Class Data Abstraction Coupling is 10 (max allowed is 7) classes [ActionListener, Color, Font, JButton, JLabel, JPanel, JTextField, KeyAdapter, WindowAdapter, java.awt.Color]." source="com.puppycrawl.tools.checkstyle.checks.metrics.ClassDataAbstractionCouplingCheck"/>
+<error line="45" column="5" severity="warning" message="NCSS for this method is 64 (max allowed is 50)." source="com.puppycrawl.tools.checkstyle.checks.metrics.JavaNCSSCheck"/>
+<error line="230" column="9" severity="warning" message="&apos;{&apos; should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="236" severity="error" message="Line is longer than 100 characters (found 128)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>
